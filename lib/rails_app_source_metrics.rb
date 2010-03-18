@@ -1,5 +1,5 @@
 class RailsAppSourceMetrics
-	require 'plugins/rails_quality/lib/directory_source_stats'
+	require 'directory_source_stats'
 
 	CODE_SECTIONS = [
 			{ :name => "Controllers", :directory => "app/controllers/" },
@@ -16,7 +16,7 @@ class RailsAppSourceMetrics
 	def initialize
 		@code_sections = CODE_SECTIONS
 		@code_sections.each do |section|
-			source_stats = DirectorySourceStats.new(RAILS_ROOT + "/" + section[:directory])
+			source_stats = DirectorySourceStats.new(File.join(Rails.root, section[:directory]))
 			section[:stats] = add_metrics_to_stats(source_stats.get_stats)
 		end
 		calculate_totals

@@ -1,5 +1,5 @@
 class CommandLineMetricOutput
-	require 'plugins/rails_quality/lib/rails_app_source_metrics'
+	require 'rails_app_source_metrics'
 
 	def initialize
 		metrics = RailsAppSourceMetrics.new()
