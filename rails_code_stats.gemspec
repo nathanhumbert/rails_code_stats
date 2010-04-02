@@ -3,7 +3,7 @@ Gem::Specification.new do |s|
 	s.summary = "Rails Code Stats"
 	s.description = "This gem calculates basic code statistics on a rails app"
 	s.homepage = "http://github.com/nathanhumbert/rails_code_stats"
-	s.version = "0.1.0"
+	s.version = "0.1.1"
 	s.authors = ["Nathan Humbert"]
 	s.email = ["nathan.humbert+rcs@gmail.com"]
 	s.files = [
